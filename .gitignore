@@ -1,0 +1,7 @@
+Debug
+SFML-2.1
+Release
+*.sdf
+*.suo
+xvo.opensdf
+*.user

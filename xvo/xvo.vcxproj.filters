@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{8ce136c6-0d77-435c-8d54-e8b4024298d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Soldier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Soldier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SFML-2.1\bin\sfml-audio-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-audio-d-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-graphics-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-graphics-d-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-network-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-network-d-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-system-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-system-d-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-window-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+    <None Include="..\SFML-2.1\bin\sfml-window-d-2.dll">
+      <Filter>Lib</Filter>
+    </None>
+  </ItemGroup>
+</Project>
