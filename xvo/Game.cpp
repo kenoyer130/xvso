@@ -4,6 +4,8 @@
 
 #include <SFML/Window.hpp>
 
+#include "XSoldierRenderer.h"
+
 void Game::Start() {
 	gameState = GameState::Running;
 
@@ -23,9 +25,8 @@ void Game::Start() {
 
 void Game::initGameWorld() {
 
-	Soldier soldier;
-	soldier.x = 0;
-	soldier.y = 0;
+	XSoldierRenderer xSoldierRenderer;
+	Soldier soldier(xSoldierRenderer);
 
 	gameWorld.entities.push_back(std::make_shared<Soldier>(soldier));
 }

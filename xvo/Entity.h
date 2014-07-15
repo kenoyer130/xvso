@@ -3,16 +3,29 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
+#include "EntityRenderer.h"
+#include "EntityState.h"
+
 class Entity
 {
+
 public:
-	float x;
-	float y;
+
+	EntityState entityState;
+
+	void Render(sf::RenderWindow &window) {
+		entityRenderer->Render(entityState, window);
+	}
 
 	virtual void Update() = 0;
-	virtual void Render(sf::RenderWindow &window) = 0;
-	
+
+protected:
+
+	Entity(EntityRenderer &renderer) {
+		entityRenderer = &renderer;
+	}
+
 private:
-	
+	EntityRenderer* entityRenderer;
 };
 #endif

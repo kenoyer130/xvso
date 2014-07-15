@@ -71,12 +71,16 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Soldier.cpp" />
+    <ClCompile Include="XSoldierRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityRenderer.h" />
+    <ClInclude Include="EntityState.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="Soldier.h" />
+    <ClInclude Include="XSoldierRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\SFML-2.1\bin\sfml-audio-2.dll">

@@ -6,8 +6,12 @@
 class Soldier :  public Entity {
 
 public:
-	virtual void Update();
-	virtual void Render(sf::RenderWindow &window);
+	Soldier(EntityRenderer &renderer) : Entity(renderer){
+		EntityState state;
+		entityState = state;
+	};
+	void Update();
+	
 private:
 
 };
