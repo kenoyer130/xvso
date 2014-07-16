@@ -1,6 +1,7 @@
 #ifndef Entity_H
 #define Entity_H
 
+#include <memory.h>
 #include <SFML/Graphics/RenderWindow.hpp>
 
 #include "EntityRenderer.h"
@@ -21,7 +22,8 @@ public:
 
 protected:
 
-	Entity(EntityRenderer &renderer) {
+	Entity(EntityRenderer& renderer) {
+
 		entityRenderer = &renderer;
 	}
 

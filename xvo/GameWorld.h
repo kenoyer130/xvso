@@ -3,12 +3,12 @@
 #include <vector>
 #include <memory>
 
-#include "Entity.h"
+#include "Entities.h"
 
 class GameWorld
 {
 public:
-	std::vector<std::shared_ptr<Entity>> entities;
+	Entities entities;
 private:
 	
 };

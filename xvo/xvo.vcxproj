@@ -74,6 +74,7 @@
     <ClCompile Include="XSoldierRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Entities.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityRenderer.h" />
     <ClInclude Include="EntityState.h" />

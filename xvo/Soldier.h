@@ -6,7 +6,7 @@
 class Soldier :  public Entity {
 
 public:
-	Soldier(EntityRenderer &renderer) : Entity(renderer){
+	Soldier(EntityRenderer& renderer) : Entity(renderer){
 		EntityState state;
 		entityState = state;
 	};

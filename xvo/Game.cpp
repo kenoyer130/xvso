@@ -4,8 +4,6 @@
 
 #include <SFML/Window.hpp>
 
-#include "XSoldierRenderer.h"
-
 void Game::Start() {
 	gameState = GameState::Running;
 
@@ -24,17 +22,13 @@ void Game::Start() {
 }
 
 void Game::initGameWorld() {
-
-	XSoldierRenderer xSoldierRenderer;
-	Soldier soldier(xSoldierRenderer);
-
-	gameWorld.entities.push_back(std::make_shared<Soldier>(soldier));
+	
 }
 
 void Game::createGameWindow() {	
 	mainWindow.create(sf::VideoMode(1024, 768), "XvsO");
 }
-
+ 
 void Game::processInput() {
 
 	sf::Event event;
@@ -47,7 +41,7 @@ void Game::processInput() {
 }
 
 void Game::update() {
-	for (std::shared_ptr<Entity> entity : gameWorld.entities) {
+	for (Entity* entity : gameWorld.entities.store) {
 		entity->Update();
 	}
 }
@@ -55,7 +49,7 @@ void Game::update() {
 void Game::render() {
 	mainWindow.clear();
 
-	for (std::shared_ptr<Entity> entity : gameWorld.entities) {
+	for (Entity* entity : gameWorld.entities.store) {
 		entity->Render(mainWindow);
 	}
 

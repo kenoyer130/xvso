@@ -53,6 +53,9 @@
     <ClInclude Include="EntityState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Entities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\SFML-2.1\bin\sfml-audio-2.dll">
