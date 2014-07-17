@@ -4,11 +4,9 @@
 #include <memory.h>
 #include <SFML/Graphics/RenderWindow.hpp>
 
-#include "EntityRenderer.h"
 #include "EntityState.h"
 #include "Entity.h"
 #include "Soldier.h"
-#include "XSoldierRenderer.h"
 
 class Entities
 {
@@ -18,16 +16,13 @@ public:
 
 	Entities() {
 		store.push_back(&x);
-		store.push_back(&y);
+		store.push_back(&o);
 	}
 	
 private:
 
-	XSoldierRenderer xSoldierRenderer;
-	XSoldierRenderer ySoldierRenderer;
-
-	Soldier x = Soldier(xSoldierRenderer);
-	Soldier y = Soldier(ySoldierRenderer);
+	Soldier x = Soldier("x");
+	Soldier o = Soldier("o");
 	
 };
 #endif

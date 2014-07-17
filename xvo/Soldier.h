@@ -6,7 +6,7 @@
 class Soldier :  public Entity {
 
 public:
-	Soldier(EntityRenderer& renderer) : Entity(renderer){
+	Soldier(std::string sprite) : Entity(sprite){
 		EntityState state;
 		entityState = state;
 	};

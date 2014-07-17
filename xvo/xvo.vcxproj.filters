@@ -30,6 +30,9 @@
     <ClCompile Include="XSoldierRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FileStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -47,13 +50,13 @@
     <ClInclude Include="EntityRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="XSoldierRenderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EntityState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Entities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileStream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -88,5 +91,13 @@
     <None Include="..\SFML-2.1\bin\sfml-window-d-2.dll">
       <Filter>Lib</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resources\X.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\resources\O.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
