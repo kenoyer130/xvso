@@ -4,13 +4,11 @@
 #include <memory.h>
 #include <string.h>
 #include <SFML/Graphics/RenderWindow.hpp>
-#include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
-#include "EntityRenderer.h"
 #include "EntityState.h"
 #include "FileStream.h"
-#include <errno.h>
+#include "TextureManager.h"
 
 class Entity
 {
@@ -27,23 +25,11 @@ public:
 
 protected:
 
-	Entity(std::string filename) {
-
-		errno = 0;
-		FileStream stream;
-
-		//todo: remove hardcoded path!
-		if (!stream.open("C:\\projects\\xvo\\Debug\\" + filename + ".png")) {
-			printf("Error %d \n", errno);
-		}
-
-		texture.loadFromStream(stream);
-		
-		sprite.setTexture(texture);
+	Entity(TextureManager &textureManager, std::string filename) {
+		sprite.setTexture(textureManager.get(filename));
 	}
 
 private:
 	sf::Sprite sprite;
-	sf::Texture texture;
 };
 #endif

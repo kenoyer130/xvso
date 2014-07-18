@@ -72,6 +72,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Soldier.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="XSoldierRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>

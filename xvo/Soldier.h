@@ -2,11 +2,12 @@
 #define Soldier_H
 
 #include "Entity.h"
+#include "TextureManager.h"
 
 class Soldier :  public Entity {
 
 public:
-	Soldier(std::string sprite) : Entity(sprite){
+	Soldier(TextureManager &textureManager, std::string fileName) : Entity(textureManager, fileName){
 		EntityState state;
 		entityState = state;
 	};

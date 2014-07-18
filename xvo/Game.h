@@ -15,6 +15,8 @@ public:
 	GameState gameState;
 	GameWorld gameWorld;
 
+	TextureManager textureManager;
+
 	sf::RenderWindow mainWindow;
 	
 	void Start();
