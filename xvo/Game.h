@@ -15,16 +15,14 @@ public:
 	GameState gameState;
 	GameWorld gameWorld;
 
-	TextureManager textureManager;
-
 	sf::RenderWindow mainWindow;
 	
 	void Start();
 private:
+	void createGameWindow();
+	void initGameWorld();
 	void processInput();
 	void update();
 	void render();
-	void initGameWorld();
-	void createGameWindow();
 };
 #endif

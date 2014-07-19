@@ -2,12 +2,12 @@
 #define Soldier_H
 
 #include "Entity.h"
-#include "TextureManager.h"
+#include "SFML\Graphics\Sprite.hpp"
 
 class Soldier :  public Entity {
 
 public:
-	Soldier(TextureManager &textureManager, std::string fileName) : Entity(textureManager, fileName){
+	Soldier(ImageManager& imageManager, std::string id) : Entity(imageManager, id){
 		EntityState state;
 		entityState = state;
 	};

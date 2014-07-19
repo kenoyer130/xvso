@@ -4,7 +4,7 @@
 void XSoldierRenderer::Render(const EntityState& state, sf::RenderWindow &window) {
 	sf::CircleShape  icon;
 	icon.setRadius(100);
-	icon.setPosition(state.x, state.y);
+	icon.setPosition(state.x, statey);
 	icon.setFillColor(sf::Color::Red);
 
 	window.draw(icon);

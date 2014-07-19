@@ -7,23 +7,21 @@
 #include "EntityState.h"
 #include "Entity.h"
 #include "Soldier.h"
-#include "TextureManager.h"
 
 class Entities
 {
 
 public:
 	std::vector<Entity*> store;
-	TextureManager textureManager;
 
 	Entities() {
 		store.push_back(&x);
-		store.push_back(&o);
+		store.push_back(&y);
 	}
-	
+
 private:
-	Soldier x = Soldier(textureManager, "x");
-	Soldier o = Soldier(textureManager, "o");
-	
+	ImageManager imageManager;
+	Soldier x = Soldier(imageManager, "x");
+	Soldier y = Soldier(imageManager, "x");
 };
 #endif

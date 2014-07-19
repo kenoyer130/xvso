@@ -5,10 +5,11 @@
 #include <string.h>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Texture.hpp>
 
 #include "EntityState.h"
 #include "FileStream.h"
-#include "TextureManager.h"
+#include "ImageManager.h"
 
 class Entity
 {
@@ -25,8 +26,8 @@ public:
 
 protected:
 
-	Entity(TextureManager &textureManager, std::string filename) {
-		sprite.setTexture(textureManager.get(filename));
+	Entity(ImageManager& imageManager, std::string id) {
+		sprite.setTexture(*imageManager.get(id));
 	}
 
 private:
