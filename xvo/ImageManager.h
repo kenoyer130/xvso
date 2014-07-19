@@ -3,6 +3,7 @@
 
 #include <string.h>
 #include <map>
+#include <memory>
 
 #include "SFML\Graphics\Texture.hpp"
 

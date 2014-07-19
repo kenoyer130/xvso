@@ -12,5 +12,10 @@ public:
 		x = 0;
 		y = 0;
 	}
+
+	EntityState(float x, float y) {
+		this->x = x;
+		this->y = y;
+	}
 };
 #endif

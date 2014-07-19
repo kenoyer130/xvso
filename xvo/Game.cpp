@@ -31,6 +31,8 @@ void Game::createGameWindow() {
  
 void Game::processInput() {
 
+	events.clear();
+
 	sf::Event event;
 	while (mainWindow.pollEvent(event)) {
 		if (event.type == sf::Event::Closed) {
@@ -38,16 +40,37 @@ void Game::processInput() {
 			return;
 		}
 	}
+
+	processMovementKeys();
 }
 
-void Game::update() {
-	for (Entity* entity : gameWorld.entities.store) {
-		entity->Update();
+void Game::processMovementKeys() {
+
+	events.push_back(Event(EventType::MoveLeft));
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+		events.push_back(Event(EventType::MoveRight));
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+		events.push_back(Event(EventType::MoveLeft));
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+		events.push_back(Event(EventType::MoveUp));
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+		events.push_back(Event(EventType::MoveDown));
 	}
 }
 
+void Game::update() {
+	gameWorld.entities.target->Update(events);
+}
+
 void Game::render() {
-	mainWindow.clear();
+	mainWindow.clear(sf::Color(255,255,255));
 
 	for (Entity* entity : gameWorld.entities.store) {
 		entity->Render(mainWindow);

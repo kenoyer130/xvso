@@ -10,24 +10,26 @@
 #include "EntityState.h"
 #include "FileStream.h"
 #include "ImageManager.h"
+#include "Event.h"
 
 class Entity
 {
 
 public:
-
-	EntityState entityState;
-
 	void Render(sf::RenderWindow &window) {
+		sprite.setPosition(state.x, state.y);
 		window.draw(sprite);
 	}
 
-	virtual void Update() = 0;
+	virtual void Update(vector<Event>& events) = 0;
 
 protected:
 
-	Entity(ImageManager& imageManager, std::string id) {
+	EntityState state;
+
+	Entity(ImageManager& imageManager, EntityState state, std::string id) {
 		sprite.setTexture(*imageManager.get(id));
+		this->state = state;
 	}
 
 private:

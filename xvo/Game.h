@@ -1,8 +1,13 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <vector>
+
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Window/Event.hpp>
+
 #include "GameWorld.h"
+#include "Event.h"
 
 enum class GameState {
 	Running,
@@ -12,6 +17,9 @@ enum class GameState {
 class Game
 {
 public:
+
+	vector<Event> events;
+
 	GameState gameState;
 	GameWorld gameWorld;
 
@@ -22,6 +30,7 @@ private:
 	void createGameWindow();
 	void initGameWorld();
 	void processInput();
+	void processMovementKeys();
 	void update();
 	void render();
 };

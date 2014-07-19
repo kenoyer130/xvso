@@ -7,13 +7,12 @@
 class Soldier :  public Entity {
 
 public:
-	Soldier(ImageManager& imageManager, std::string id) : Entity(imageManager, id){
-		EntityState state;
-		entityState = state;
+	Soldier(ImageManager& imageManager, EntityState state, std::string id) : Entity(imageManager, state, id){
+
 	};
-	void Update();
+	void Update(vector<Event>& events);
 	
 private:
-
+	EntityState state;
 };
 #endif

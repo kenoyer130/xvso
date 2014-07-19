@@ -13,15 +13,23 @@ class Entities
 
 public:
 	std::vector<Entity*> store;
+	Entity* target;
 
 	Entities() {
-		store.push_back(&x);
-		store.push_back(&y);
+
+		EntityState xState(10, 50);
+		EntityState yState(100, 100);
+
+		Soldier* x = new Soldier(imageManager, xState, "x");
+		Soldier* o = new Soldier(imageManager, yState, "o");
+
+		store.push_back(x);
+		store.push_back(o);
+
+		target = x;
 	}
 
 private:
 	ImageManager imageManager;
-	Soldier x = Soldier(imageManager, "x");
-	Soldier y = Soldier(imageManager, "x");
 };
 #endif
