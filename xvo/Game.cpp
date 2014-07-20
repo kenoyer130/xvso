@@ -46,8 +46,6 @@ void Game::processInput() {
 
 void Game::processMovementKeys() {
 
-	events.push_back(Event(EventType::MoveLeft));
-
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
 		events.push_back(Event(EventType::MoveRight));
 	}

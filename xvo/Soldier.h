@@ -13,6 +13,6 @@ public:
 	void Update(vector<Event>& events);
 	
 private:
-	EntityState state;
+
 };
 #endif
