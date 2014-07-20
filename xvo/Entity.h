@@ -32,6 +32,8 @@ protected:
 		this->state = state;
 	}
 
+	void checkBounds();
+
 private:
 	sf::Sprite sprite;
 };

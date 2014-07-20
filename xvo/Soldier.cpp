@@ -25,4 +25,6 @@ void Soldier::Update(vector<Event>& events) {
 			break;
 		}
 	}
+
+	checkBounds();
 }
